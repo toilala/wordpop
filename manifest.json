@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "WordPop Pro",
+  "version": "2.1.0",
+  "description": "Professional dictionary & phrase translator. Instant words, bubble for phrases.",
+  "permissions": ["storage", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "panel.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "128": "icons/icon.svg"
+  }
+}

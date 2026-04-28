@@ -1,0 +1,40 @@
+#wp-popup {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 2147483647;
+  width: 280px;
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+#wp-popup.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.wp-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.wp-word { font-weight: 700; font-size: 18px; color: #4f46e5; }
+.wp-cache-tag { font-size: 12px; }
+.wp-audio-btn { 
+  background: #f3f4f6; border: none; border-radius: 50%; 
+  width: 28px; height: 28px; cursor: pointer; 
+}
+
+.wp-meaning { margin-bottom: 10px; border-top: 1px solid #f0f0f0; padding-top: 8px; }
+.wp-pos { font-size: 12px; color: #6b7280; font-style: italic; }
+
+@media (prefers-color-scheme: dark) {
+  #wp-popup { background: #1f2937; color: #f9fafb; border-color: #374151; }
+  .wp-word { color: #818cf8; }
+  .wp-audio-btn { background: #374151; }
+}
